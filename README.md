@@ -33,8 +33,11 @@ function success(imgurl) {
 #####Here options are
 
 **name** = Suffix to be added while saving the image for.e.g Image-yyyymmddhhmmss
+
 **dirName** = Folder will be created with this name in Pictures directory of external storage.
+
 **orientation** = while taking the picture, camera should be in landscape or portrait mode.
+
 **type** = Either to use front or bank camera.
 
 
