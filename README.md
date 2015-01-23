@@ -3,7 +3,7 @@ Automatically take Picture from Android Smartphones without any User Interaction
 
 ###Supported Platform
 
-*Android
+* Android
 
 ###Installation
 
