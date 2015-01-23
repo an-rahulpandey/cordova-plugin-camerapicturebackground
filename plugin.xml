@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="me.rahul.plugins.camerapicturebackground"
+		version="0.0.1"
+		xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>CameraPictureBackground</name>
+
+    <description>Take Picture from the camera without any interaction from the user.</description>
+
+    <keywords>android camera,background camera, camera background picture, background picture</keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>Rahul Pandey</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module name="CameraPictureBackground" src="www/CameraPictureBackground.js">
+        <clobbers target="window.plugins.CameraPictureBackground" />
+    </js-module>
+
+     <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CameraPictureBackground" >
+                <param name="android-package" value="me.rahul.plugins.camerapicturebackground.CameraPictureBackground"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.RECORD_VIDEO" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+            <uses-feature android:name="android.hardware.camera" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
+            <uses-feature android:name="android.hardware.camera.setParameters" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <service android:enabled="true" android:exported="false" android:name="me.rahul.plugins.camerapicturebackground.CameraSurfacePreview" />
+        </config-file>
+
+        <source-file src="src/android/CameraPictureBackground.java" target-dir="src/me/rahul/plugins/camerapicturebackground" />
+        <source-file src="src/android/CameraSurfacePreview.java" target-dir="src/me/rahul/plugins/camerapicturebackground" />
+
+    </platform>
+    
+</plugin>
