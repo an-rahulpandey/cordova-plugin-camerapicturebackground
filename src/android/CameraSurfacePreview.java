@@ -88,7 +88,7 @@ public class CameraSurfacePreview extends Service {
 				camera.setDisplayOrientation(rotation);
 				Camera.Parameters params = camera.getParameters();
 				params.setJpegQuality(100);
-				if (params.getSceneMode() != null)
+				if (params.getSceneMode() != null) {
 				    params.setSceneMode(Parameters.SCENE_MODE_STEADYPHOTO);
 				}
 				params.setFocusMode(Parameters.FOCUS_MODE_FIXED);
