@@ -1,5 +1,5 @@
 {
-  "name": "CameraPictureBackground",
+  "name": "camerapicturebackground",
   "version": "0.0.1",
   "description": "Take Picture from the camera without any interaction from the user.",
   "cordova": {
