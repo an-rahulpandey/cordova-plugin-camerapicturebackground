@@ -1,0 +1,35 @@
+{
+  "name": "CameraPictureBackground",
+  "version": "0.0.1",
+  "description": "Take Picture from the camera without any interaction from the user.",
+  "cordova": {
+    "id": "me.rahul.plugins.camerapicturebackground",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/an-rahulpandey/cordova-plugin-camerapicturebackground.git"
+  },
+  "keywords": [
+    "android camera",
+    "background camera",
+    "camera background picture",
+    "background picture",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Rahul Pandey",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/an-rahulpandey/cordova-plugin-camerapicturebackground/issues"
+  },
+  "homepage": "https://github.com/an-rahulpandey/cordova-plugin-camerapicturebackground#readme"
+}
