@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import android.app.Service;
 import android.content.Context;
@@ -91,7 +92,9 @@ public class CameraSurfacePreview extends Service {
 				if (params.getSceneMode() != null) {
 				    params.setSceneMode(Parameters.SCENE_MODE_STEADYPHOTO);
 				}
-				params.setFocusMode(Parameters.FOCUS_MODE_FIXED);
+				List<String> focusModes = params.getSupportedFocusModes();
+				if (focusModes.contains(Parameters.FOCUS_MODE_FIXED))
+					params.setFocusMode(Parameters.FOCUS_MODE_FIXED);
 				params.setRotation(rotation);
 				camera.setParameters(params);
 
