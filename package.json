@@ -1,6 +1,6 @@
 {
   "name": "camerapicturebackground",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Take Picture from the camera without any interaction from the user.",
   "cordova": {
     "id": "me.rahul.plugins.camerapicturebackground",
