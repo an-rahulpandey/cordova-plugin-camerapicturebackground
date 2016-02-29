@@ -83,11 +83,13 @@ public class CameraSurfacePreview extends Service {
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 				}
-
-				camera.startPreview();
-
 				camera.setDisplayOrientation(rotation);
 				Camera.Parameters params = camera.getParameters();
+    				List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
+    				Log.d("CordovaLog","preview sizes = "+previewSizes);
+    				Camera.Size previewSize =  previewSizes.get(0);
+				parameters.setPreviewSize(previewSize.width, previewSize.height);
+    				
 				params.setJpegQuality(100);
 				if (params.getSceneMode() != null) {
 				    params.setSceneMode(Parameters.SCENE_MODE_STEADYPHOTO);
@@ -97,7 +99,7 @@ public class CameraSurfacePreview extends Service {
 					params.setFocusMode(Parameters.FOCUS_MODE_FIXED);
 				params.setRotation(rotation);
 				camera.setParameters(params);
-
+				camera.startPreview();
 				camera.takePicture(null, null, new PictureCallback() {
 
 					@Override
