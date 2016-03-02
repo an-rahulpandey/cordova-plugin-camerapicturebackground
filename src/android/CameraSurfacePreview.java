@@ -85,10 +85,10 @@ public class CameraSurfacePreview extends Service {
 				}
 				camera.setDisplayOrientation(rotation);
 				Camera.Parameters params = camera.getParameters();
-    				List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
+    				List<Camera.Size> previewSizes = params.getSupportedPreviewSizes();
     				Log.d("CordovaLog","preview sizes = "+previewSizes);
     				Camera.Size previewSize =  previewSizes.get(0);
-				parameters.setPreviewSize(previewSize.width, previewSize.height);
+				params.setPreviewSize(previewSize.width, previewSize.height);
     				
 				params.setJpegQuality(100);
 				if (params.getSceneMode() != null) {
