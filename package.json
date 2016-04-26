@@ -1,9 +1,9 @@
 {
-  "name": "camerapicturebackground",
-  "version": "0.0.2",
+  "name": "cordova-plugin-camerapicturebackground",
+  "version": "0.0.3",
   "description": "Take Picture from the camera without any interaction from the user.",
   "cordova": {
-    "id": "me.rahul.plugins.camerapicturebackground",
+    "id": "cordova-plugin-camerapicturebackground",
     "platforms": [
       "android"
     ]
