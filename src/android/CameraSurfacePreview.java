@@ -113,7 +113,7 @@ public class CameraSurfacePreview extends Service {
 						if (!pictureFileDir.exists())
 							pictureFileDir.mkdir();
 						
-						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyymmddhhmmss");
+						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhhmmss");
 						String date = dateFormat.format(new Date());
 						
 						String filepath = pictureFileDir.getPath()
