@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-camerapicturebackground"
-		version="0.0.3"
+		version="0.0.4"
 		xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -35,9 +35,9 @@
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
             <uses-permission android:name="android.permission.CAMERA" />
             <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-            <uses-feature android:name="android.hardware.camera" />
-            <uses-feature android:name="android.hardware.camera.autofocus" />
-            <uses-feature android:name="android.hardware.camera.setParameters" />
+            <uses-feature android:name="android.hardware.camera" android:required="false"/>
+            <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+            <uses-feature android:name="android.hardware.camera.setParameters" android:required="false"/>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
