@@ -1,11 +1,13 @@
-# cordova-plugin-camerapicturebackground
+## Plugin Doesn't work on Android 6.0 and above
+
+### cordova-plugin-camerapicturebackground
 Automatically take Picture from Android Smartphones without any User Interactions.
 
-###Supported Platform
+### Supported Platform
 
 * Android
 
-###Installation
+### Installation
 
 Plugin can be installed using the [Command Line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface):
 
@@ -13,7 +15,7 @@ Plugin can be installed using the [Command Line Interface](http://cordova.apache
 cordova plugin add https://github.com/an-rahulpandey/cordova-plugin-camerapicturebackground.git
 ````
 
-###Plugin Usage
+### Plugin Usage
 
 ````
 var options = {
@@ -30,7 +32,7 @@ function success(imgurl) {
 }
 ````
 
-#####Here options are
+##### Here options are
 
 **name** = Suffix to be added while saving the image for.e.g Image-yyyymmddhhmmss
 
@@ -41,6 +43,6 @@ function success(imgurl) {
 **type** = Either to use front or bank camera.
 
 
-###Credits
+### Credits
 
 Stackoverflow user Sam - http://stackoverflow.com/a/27083867/1584921
